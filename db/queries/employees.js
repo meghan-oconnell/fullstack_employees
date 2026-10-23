@@ -14,6 +14,7 @@ export async function createEmployee({ name, birthday, salary }) {
   const {
     rows: [employee],
   } = await db.query(sql, [name, birthday, salary]);
+  return employee;
 }
 
 // === Part 2 ===
